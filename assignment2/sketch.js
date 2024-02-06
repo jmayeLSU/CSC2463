@@ -13,7 +13,7 @@ function setup() {
     color('cyan'),
     color('blue'),
     color('purple'),
-    color('brown'),
+    color('#774315'), //brown
     color('white'),
     color('black'),
   ];
@@ -44,5 +44,3 @@ function mouseDragged() {
   line(pmouseX,pmouseY,mouseX,mouseY);
   strokeWeight(1);
 }
-
-
