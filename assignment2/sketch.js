@@ -12,7 +12,7 @@ function setup() {
     color('cyan'),
     color('blue'),
     color('magenta'),
-    color('#774315'), //brown
+    color('saddlebrown'), //brown
     color('white'),
     color('black'),
   ];
