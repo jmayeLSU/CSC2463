@@ -1,6 +1,5 @@
 let colors;
 let selectedCol;
-let dragging;
 
 function setup() {
   createCanvas(600, 400);
@@ -17,8 +16,6 @@ function setup() {
     color('white'),
     color('black'),
   ];
-  selectedCol = color('red');
-  dragging = false;
 }
 
 function draw() {
@@ -39,6 +36,7 @@ function mouseClicked() {
 }
 
 function mouseDragged() {
+  if(selectedCol == null){ return; }
   stroke(selectedCol);
   strokeWeight(10);
   line(pmouseX,pmouseY,mouseX,mouseY);
