@@ -1,5 +1,4 @@
-
-
+let colors
 
 
 function setup() {
@@ -16,10 +15,19 @@ function setup() {
     color('brown'),
     color('white'),
     color('black'),
-  ]
+  ];
+
 
 }
 
 function draw() {
   background(220);
+  let cx = 0;
+  let cy = 0;
+  stroke('white');
+  for(let i = 0; i < colors.length; i++) {
+    fill(colors[i]);
+    rect(cx,cy,25,25);
+    cy +=25;
+  }
 }
