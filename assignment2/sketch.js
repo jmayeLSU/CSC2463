@@ -8,10 +8,10 @@ function setup() {
     color('red'), 
     color('orange'), 
     color('yellow'), 
-    color('green'),
+    color('lime'),
     color('cyan'),
     color('blue'),
-    color('purple'),
+    color('magenta'),
     color('#774315'), //brown
     color('white'),
     color('black'),
