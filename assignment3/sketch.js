@@ -90,7 +90,8 @@ class Character{
       //walk animation is frames 1-8 of row 0
       walk: {row: c[0], col: c[1], frames: n}
     });
-    
+    //turn off collision 
+    this.sprite.collider = 'none';
     //set start animation to stand
     this.sprite.changeAni("stand");
   }
