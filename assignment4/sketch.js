@@ -38,6 +38,7 @@ function draw() {
   //stop the game when the timer hits 0
   if(timer == 0){
     if(!gameover){
+      //display gameover and final score
       strokeJoin(ROUND);
       textAlign(CENTER);
       stroke('black');
@@ -94,7 +95,7 @@ function mouseClicked(){
       if(!bug.dead){
         //increment score
         score++;
-        speed += 1/(nbugs-score);
+        speed = 1 + 0.1*score;
         bug.dead = true;
 
         // return to prevent clicking on multiple bugs at once
