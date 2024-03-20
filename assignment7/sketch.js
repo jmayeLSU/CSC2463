@@ -7,12 +7,13 @@ noise.connect(filter);
 filter.connect(gain);
 
 let synth = new Tone.Synth().connect(gain);
-let lfo = new Tone.LFO(40, 200, 400).connect(synth.frequency).start();
+let lfo = new Tone.LFO(40, 200, 400).connect(synth.frequency);
 
 gain.toDestination();
 
 function preload(){
   pic = loadImage('assets/lightsaber.jpeg')
+  lfo.start();
 }
 
 
