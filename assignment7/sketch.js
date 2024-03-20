@@ -1,7 +1,7 @@
 let basefreq = 100;
 let endfreq = 10000;
 
-let noise = new Tone.Noise('pink');
+let noise = new Tone.Noise('brown');
 let filter = new Tone.Filter(basefreq,'highpass');
 
 let synth = new Tone.Synth().toDestination();
