@@ -1,6 +1,6 @@
 let basefreq = 200;
 let endfreq = 2000;
-let gain = new Tone.Gain(0.1);
+let gain = new Tone.Gain(0.1); //lovers volume
 let noise = new Tone.Noise('pink');
 let filter = new Tone.Filter(basefreq,'highpass');
 noise.connect(filter);
