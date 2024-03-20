@@ -1,15 +1,15 @@
-let basefreq = 100;
-let endfreq = 10000;
-
-let noise = new Tone.Noise('brown');
+let basefreq = 200;
+let endfreq = 2000;
+let gain = new Tone.Gain(0.1);
+let noise = new Tone.Noise('pink');
 let filter = new Tone.Filter(basefreq,'highpass');
+noise.connect(filter);
+filter.connect(gain);
 
-let synth = new Tone.Synth().toDestination();
+let synth = new Tone.Synth().connect(gain);
 let lfo = new Tone.LFO(40, 200, 400).connect(synth.frequency).start();
 
-
-noise.connect(filter);
-filter.toDestination();
+gain.toDestination();
 
 function preload(){
   pic = loadImage('assets/lightsaber.jpeg')
