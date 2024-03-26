@@ -20,7 +20,7 @@ let time = 0;
 const x1 = 0, y1 = 50, x2 = 400, y2 = 450; 
 
 
-let gain = new Tone.Gain(0.05);
+let gain = new Tone.Gain(0.1);
 let synth = new Tone.Synth().connect(gain);
 let menusynth = new Tone.Synth().connect(gain);
 let musicsynth = new Tone.Synth().connect(gain);
@@ -150,6 +150,7 @@ function draw() {
   if(time != second()){
     time = second();
     if(timer < 11 && timer > 1){  
+      musicsynth.volume.value = -14;
       menusynth.triggerAttackRelease('C3',0.1);
     }
     timer--;
