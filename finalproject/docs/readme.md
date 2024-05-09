@@ -127,7 +127,7 @@ The drawbacks:
 
 While more complicated paths are desired, implementing this would be quite difficult as I would have to somehow calculate what a simple path is and prevent it from occuring. Having a path to all spaces in the maze is beneficial since the player needs access the 4 corners in the maze.
   
-To use Kruskal's Algorithm in the game's implementation, mazes are treated as grids of square cells with edge lines between adjacent cells in the maze. As per Kruskal's Algorithm, the maze grid acts initially a forest of single nodes trees (individual maze cells). A cell's potential branches are the edges between it and adjecent cells. Each edge has equal weight values so they are randomly selected. When cells are joined into a single tree by a branch, the gridlines between them go away. When the algorithm finishes, the result is a maze like the one shown earlier in the **Game Design** section of the document.  
+To use Kruskal's Algorithm in the game's implementation, mazes are treated as grids of square cells with edge lines between adjacent cells in the maze. As per Kruskal's Algorithm, the maze grid acts initially a forest of single node trees (individual maze cells). A cell's potential branches are the edges between it and adjecent cells. Each edge has equal weight values so they are randomly selected. When cells are joined into a single tree by a branch, the gridlines between them go away. When the algorithm finishes, the result is a maze like the one shown earlier in the **Game Design** section of the document.  
   
 Edge lines in each maze are drawn by labeling which edges were joined in maze creation. Edges that were not used to join cells will have a line drawn using `p5.js` and some math. 
 
