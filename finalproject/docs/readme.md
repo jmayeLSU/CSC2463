@@ -48,18 +48,18 @@ The player is able to see:
 The connect button allows the game to link up to the arduino serial port if the Arduino is plugged in via USB.  
 Please note that for some browsers this button is not functional. Chrome is the only browser that I am aware of where this is fully functional.  
   
-Currently, the game is in the start state. The player is limited to only seeing the start text, a frozen timer, and treasure counter stuck at 0. At this point (assuming the game hasn't been played yet on this page), a random 10 by 10 maze has already been generated and is just not displayed.  
+Currently, the game is in the start state. The player is limited to only seeing the start text, a frozen timer, and treasure counter stuck at 0. At this point (assuming the game hasn't been played yet on this page), a random 10x10 maze has already been generated and is just not displayed.  
   
 Here is an example of what maze could be when the game starts:  
    
-![Gameplay Screen Here](/finalproject/docs/assets/gameplay.png)  
+![Gameplay Screen Here](./assets/gameplay.png)  
 
 Now the player can see: 
 - The red, blue, green, and purple treasures in the four corners of the maze
 
 - the player character ( he's yellow :^) )
 
-The game is now in the play state. The player starts in the middle of the maze and the timer begins to tick down. The LED connected to the arduino will light up with either a red, blue, green, or purple color. Now the player can navigate through the maze to reach the treasures. Once the player reaches a treasure, they can pick up the treasure, and then the LED will change color to match of one of the remaining treasures.  
+The game is now in the play state. The player starts in the middle of the maze and the timer begins to tick down. The LED connected to the arduino will light up with either a red, blue, green, or purple color. Now the player can navigate through the maze to reach the treasures. The directions of movement are restricted according to the maze walls. Once the player reaches a treasure, they can pick up the treasure, and then the LED will change color to match of one of the remaining treasures.  
   
 Moving the player charcter cycles through sprites to show movement.  
   
@@ -73,7 +73,7 @@ This is what it looks like if the player wins:
 
 ![Game End Screen Here](./assets/endscreen.png)    
 
-This is the end state. From here the player can return to the start screen by pressing the joystick button. If the player wins like in the screenshot, replaying increases the difficulty. The harder difficulty uses a random 20 by 20 maze with a 70 second timer.
+This is the end state. From here the player can return to the start screen by pressing the joystick button. If the player wins like in the screenshot, replaying increases the difficulty. The harder difficulty uses a random 20x20 maze with a 70 second timer.
 
 A maze from the harder difficulty could look like this:
   
@@ -127,9 +127,9 @@ The drawbacks:
 
 While more complicated paths are desired, implementing this would be quite difficult as I would have to somehow calculate what a simple path is and prevent it from occuring. Having a path to all spaces in the maze is beneficial since the player needs access the 4 corners in the maze.
   
-In this implementation, mazes are treated as grids of square cells with edge lines between adjacent cells in the maze. As per Kruskal's Algorithm, the maze grid acts initially a forest of single nodes trees (individual maze cells). A cell's potential branches are the edges between it and adjecent cells. Each edge has equal weight values so that they are randomly selected. When cells are joined into a single tree by a branch, the gridlines between them go away. When the algorithm finishes, the result is a maze as shown in the earlier **Game Design** section of the document.  
+In the game's implementation, mazes are treated as grids of square cells with edge lines between adjacent cells in the maze. As per Kruskal's Algorithm, the maze grid acts initially a forest of single nodes trees (individual maze cells). A cell's potential branches are the edges between it and adjecent cells. Each edge has equal weight values so they are randomly selected. When cells are joined into a single tree by a branch, the gridlines between them go away. When the algorithm finishes, the result is a maze like the one shown earlier in the **Game Design** section of the document.  
   
-Edge lines in each maze are drawn by labeling which edges were joined in maze creation. Edges that were not used to join cells will have a line drawn using `p5.js`. 
+Edge lines in each maze are drawn by labeling which edges were joined in maze creation. Edges that were not used to join cells will have a line drawn using `p5.js` and some math. 
 
 ## Adruino Details
 
@@ -159,3 +159,17 @@ Code for the arduino handles printing the joystick inputs to the serial port, re
 ## Gameplay Video (ctrl + left click to play in new tab)
 
 [![Project Video Here](https://img.youtube.com/vi/msQaEX3tyUo/0.jpg)](https://www.youtube.com/watch?v=msQaEX3tyUo)
+
+## Final Thoughts + Future Development
+
+I am pretty satisfied with how the end product turned out, and I do not intend on making any major changes to it. 
+  
+Here are some changes I would consider adding:  
+
+- Better visuals and sounds (This is an area I lack skill in)
+
+- A way to play the game without an Arduino (not many people own one to play the game)
+
+- A way to set custom maze sizes (right now you can only play in 10x10 and 20x20)  
+
+The project as a whole was a useful experience and I found researching the algorithms for maze creation to be very interesting. I am pretty new to working with java script and Arduino, so I am sure the structure of my code could be done much better. Using an Arduino with this project was fun, but I would avoid using one in the future. The wiring comes apart too easily and certain parts are too delicate. I am curious if it would be possible to hook up a video game controller and use inputs from that. 
