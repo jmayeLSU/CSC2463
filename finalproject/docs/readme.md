@@ -73,7 +73,7 @@ This is what it looks like if the player wins:
 
 ![Game End Screen Here](./assets/endscreen.png)    
 
-This is the end state. From here the player can return to the start screen by pressing the joystick button. If the player wins like in the screenshot, replaying increases the difficulty. The harder difficulty uses a random 20x20 maze with a 70 second timer.
+This is the end state. From here the player can return to the start screen by pressing the joystick button. Returning to the start screen resets everything and generates a new maze (that won't be displayed until the game starts). If the player won like in the screenshot, replaying increases the difficulty level. The harder difficulty uses a random 20x20 maze with a 70 second timer.
 
 A maze from the harder difficulty could look like this:
   
