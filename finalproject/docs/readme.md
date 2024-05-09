@@ -34,7 +34,7 @@ A gameplay video is included at the bottom of the document. It was filmed in suc
 
 Here is what the game's start screen looks like:  
 
-![Game Start Screen Here](/finalproject/docs/assets/startscreen.png)  
+![Game Start Screen Here](./assets/startscreen.png)  
   
 The player is able to see: 
 - the current timer (starts at 60 seconds)
@@ -57,7 +57,7 @@ Here is an example of what maze could be when the game starts:
 Now the player can see: 
 - The red, blue, green, and purple treasures in the four corners of the maze
 
-- the player character ( he's yellow :^] )
+- the player character ( he's yellow :^) )
 
 The game is now in the play state. The player starts in the middle of the maze and the timer begins to tick down. The LED connected to the arduino will light up with either a red, blue, green, or purple color. Now the player can navigate through the maze to reach the treasures. Once the player reaches a treasure, they can pick up the treasure, and then the LED will change color to match of one of the remaining treasures.  
   
@@ -65,19 +65,19 @@ Moving the player charcter cycles through sprites to show movement.
   
 Here are the player movement sprites:
   
-![Player Spritesheet Here](/finalproject/assets/player.png)  
+![Player Spritesheet Here](../assets/player.png)  
 
 After all four treasures are collected, or the player has a gameover, the end screen will show up. The message on the end screen will change depending on how the game ended.
   
 This is what it looks like if the player wins:
 
-![Game End Screen Here](/finalproject/docs/assets/endscreen.png)    
+![Game End Screen Here](./assets/endscreen.png)    
 
 This is the end state. From here the player can return to the start screen by pressing the joystick button. If the player wins like in the screenshot, replaying increases the difficulty. The harder difficulty uses a random 20 by 20 maze with a 70 second timer.
 
 A maze from the harder difficulty could look like this:
   
-![Hard Gameplay Screen Here](/finalproject/docs/assets/hardgameplay.png)  
+![Hard Gameplay Screen Here](./assets/hardgameplay.png)  
   
 This difficulty is much harder and will likely take multiple tries to win. Losing does not take the player back to the lower difficulty. Simply refreshing the browser window will do that.
 
@@ -137,7 +137,7 @@ The arduino uses `final.ino` in the directory `finalproject/final/final.ino`
   
 Here is a diagram that includes all relavent parts to be used with the Arduino:  
   
-![Adruino Diagram Here](/finalproject/docs/assets/diagram.png)   
+![Adruino Diagram Here](./assets/diagram.png)   
    
 Arduino parts:  
 - Arduino Board + Breadboard + USB cable
